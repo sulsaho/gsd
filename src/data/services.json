@@ -1,0 +1,445 @@
+{
+  "lastUpdated": "2025-10-25",
+  "government": {
+    "name": "Government of The Gambia",
+    "contact": "+220-422-6600",
+    "website": "www.statehouse.gov.gm"
+  },
+  "ministries": [
+    {
+      "id": "health",
+      "name": "Ministry of Health",
+      "description": "Health services and licensing",
+      "phone": "+220-439-2072",
+      "email": "info@health.gm",
+      "website": "https://www.moh.gov.gm",
+      "departments": [
+        {
+          "id": "health-licensing",
+          "name": "Licensing & Registration",
+          "icon": "certificate",
+          "services": [
+            {
+              "id": "medical-license",
+              "name": "Medical Professional License",
+              "description": "License for doctors, nurses, and other medical professionals",
+              "requirements": [
+                "Bachelor's degree in medical field",
+                "Pass licensing exam",
+                "Police clearance certificate",
+                "Professional references (2)"
+              ],
+              "processingTime": "4-6 weeks",
+              "cost": "D2,500",
+              "contactName": "Licensing Department",
+              "contactPhone": "+220-439-2072",
+              "contactEmail": "licensing@health.gm",
+              "officeAddress": "123 Health Building, Kairaba Avenue, Banjul",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM",
+              "link": "https://www.moh.gov.gm/licenses/medical",
+              "notes": "Original documents required"
+            },
+            {
+              "id": "pharmacy-license",
+              "name": "Pharmacy Operating License",
+              "description": "License to operate a pharmacy or pharmaceutical business",
+              "requirements": [
+                "Degree in Pharmacy",
+                "Premises inspection certificate",
+                "Business registration",
+                "Pharmacist certification"
+              ],
+              "processingTime": "6-8 weeks",
+              "cost": "D5,000",
+              "contactName": "Pharmaceutical Affairs",
+              "contactPhone": "+220-439-2073",
+              "contactEmail": "pharmacy@health.gm",
+              "officeAddress": "123 Health Building, Kairaba Avenue, Banjul",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM",
+              "link": "https://www.moh.gov.gm/licenses/pharmacy"
+            }
+          ]
+        },
+        {
+          "id": "health-records",
+          "name": "Health Records & Certificates",
+          "icon": "document",
+          "services": [
+            {
+              "id": "birth-certificate",
+              "name": "Birth Certificate",
+              "description": "Official birth certificate for newborns",
+              "requirements": [
+                "Hospital delivery record",
+                "Parents' identification cards",
+                "Marriage certificate (if applicable)"
+              ],
+              "processingTime": "2-3 weeks",
+              "cost": "D150",
+              "contactName": "Vital Statistics",
+              "contactPhone": "+220-439-2074",
+              "contactEmail": "records@health.gm",
+              "officeAddress": "Vital Statistics Office, Independence Drive, Banjul",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM"
+            },
+            {
+              "id": "health-certificate",
+              "name": "Health Certificate",
+              "description": "Medical fitness certificate for employment or travel",
+              "requirements": [
+                "Medical examination at approved facility",
+                "Recent passport photo",
+                "ID card or passport"
+              ],
+              "processingTime": "1-2 days",
+              "cost": "D300",
+              "contactName": "Medical Certification",
+              "contactPhone": "+220-439-2075",
+              "contactEmail": "medcert@health.gm",
+              "officeAddress": "Edward Francis Small Teaching Hospital, Banjul",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interior",
+      "name": "Ministry of Interior",
+      "description": "Internal security and administrative services",
+      "phone": "+220-422-7526",
+      "email": "info@interior.gm",
+      "website": "https://www.moi.gov.gm",
+      "departments": [
+        {
+          "id": "interior-passports",
+          "name": "Passport & Travel",
+          "icon": "passport",
+          "services": [
+            {
+              "id": "passport-new",
+              "name": "New Passport Application",
+              "description": "Apply for your first Gambian passport",
+              "requirements": [
+                "Birth certificate (original)",
+                "National ID or voter card",
+                "2 passport photos (recent)",
+                "Proof of citizenship"
+              ],
+              "processingTime": "5-7 working days",
+              "cost": "D1,200",
+              "contactName": "Passport Office",
+              "contactPhone": "+220-422-7800",
+              "contactEmail": "passports@interior.gm",
+              "officeAddress": "Immigration Department, Independence Drive, Banjul",
+              "officeHours": "Monday-Friday, 8 AM - 5 PM",
+              "link": "https://www.moi.gov.gm/services/passport"
+            },
+            {
+              "id": "passport-renewal",
+              "name": "Passport Renewal",
+              "description": "Renew an existing passport",
+              "requirements": [
+                "Old passport (original)",
+                "2 passport photos (recent)",
+                "National ID"
+              ],
+              "processingTime": "3-5 working days",
+              "cost": "D1,200",
+              "contactName": "Passport Office",
+              "contactPhone": "+220-422-7800",
+              "contactEmail": "passports@interior.gm",
+              "officeAddress": "Immigration Department, Independence Drive, Banjul",
+              "officeHours": "Monday-Friday, 8 AM - 5 PM",
+              "link": "https://www.moi.gov.gm/services/passport"
+            }
+          ]
+        },
+        {
+          "id": "interior-police",
+          "name": "Police Services",
+          "icon": "shield",
+          "services": [
+            {
+              "id": "police-clearance",
+              "name": "Police Clearance Certificate",
+              "description": "Certificate of good conduct for employment or travel",
+              "requirements": [
+                "National ID or passport",
+                "Recent passport photo",
+                "Fingerprints (taken at office)",
+                "Application form"
+              ],
+              "processingTime": "2-3 weeks",
+              "cost": "D500",
+              "contactName": "Criminal Records Office",
+              "contactPhone": "+220-422-6666",
+              "contactEmail": "clearance@police.gm",
+              "officeAddress": "Gambia Police Headquarters, Kairaba Avenue, Banjul",
+              "officeHours": "Monday-Friday, 9 AM - 3 PM"
+            },
+            {
+              "id": "firearm-license",
+              "name": "Firearm License",
+              "description": "License to possess and use a firearm",
+              "requirements": [
+                "Application form (signed by chief)",
+                "Police clearance certificate",
+                "Mental health certificate",
+                "Firearm training certificate",
+                "Valid reason for possession"
+              ],
+              "processingTime": "8-12 weeks",
+              "cost": "D3,000",
+              "contactName": "Arms & Ammunition Unit",
+              "contactPhone": "+220-422-6667",
+              "contactEmail": "firearms@police.gm",
+              "officeAddress": "Gambia Police Headquarters, Kairaba Avenue, Banjul",
+              "officeHours": "Monday-Friday, 9 AM - 3 PM"
+            }
+          ]
+        },
+        {
+          "id": "interior-immigration",
+          "name": "Immigration Services",
+          "icon": "plane",
+          "services": [
+            {
+              "id": "work-permit",
+              "name": "Work Permit for Non-Citizens",
+              "description": "Permit allowing foreign nationals to work in The Gambia",
+              "requirements": [
+                "Valid passport",
+                "Employment contract",
+                "Company registration documents",
+                "Medical certificate",
+                "Police clearance from home country",
+                "Recent passport photos (2)"
+              ],
+              "processingTime": "4-6 weeks",
+              "cost": "D15,000 per year",
+              "contactName": "Immigration Department",
+              "contactPhone": "+220-422-7801",
+              "contactEmail": "workpermits@immigration.gm",
+              "officeAddress": "Immigration Department, Independence Drive, Banjul",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "Ministry of Transport, Works & Infrastructure",
+      "description": "Transportation, licensing, and infrastructure services",
+      "phone": "+220-422-8230",
+      "email": "info@motw.gm",
+      "website": "https://www.motw.gov.gm",
+      "departments": [
+        {
+          "id": "transport-licensing",
+          "name": "Driver & Vehicle Licensing",
+          "icon": "car",
+          "services": [
+            {
+              "id": "drivers-license",
+              "name": "Driver's License",
+              "description": "License to operate a motor vehicle",
+              "requirements": [
+                "Proof of identity (ID or passport)",
+                "Driving school certificate",
+                "Pass written and practical exam",
+                "Medical certificate",
+                "Recent passport photos (2)"
+              ],
+              "processingTime": "2-3 weeks after passing exams",
+              "cost": "D1,500",
+              "contactName": "Vehicle Licensing Authority",
+              "contactPhone": "+220-422-8800",
+              "contactEmail": "licensing@vla.gm",
+              "officeAddress": "Vehicle Licensing Authority, Kanifing Industrial Area",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM"
+            },
+            {
+              "id": "vehicle-registration",
+              "name": "Vehicle Registration",
+              "description": "Register a new or imported vehicle",
+              "requirements": [
+                "Bill of sale or customs clearance",
+                "Proof of ownership",
+                "Vehicle inspection certificate",
+                "Insurance certificate",
+                "ID card or passport"
+              ],
+              "processingTime": "1-2 weeks",
+              "cost": "D2,500 + tax based on engine size",
+              "contactName": "Vehicle Registration",
+              "contactPhone": "+220-422-8801",
+              "contactEmail": "registration@vla.gm",
+              "officeAddress": "Vehicle Licensing Authority, Kanifing Industrial Area",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM"
+            },
+            {
+              "id": "roadworthiness",
+              "name": "Vehicle Roadworthiness Certificate",
+              "description": "Annual vehicle inspection certificate",
+              "requirements": [
+                "Vehicle to be inspected",
+                "Vehicle registration documents",
+                "Previous roadworthiness certificate (if renewal)"
+              ],
+              "processingTime": "Same day (if passed)",
+              "cost": "D300",
+              "contactName": "Vehicle Inspection Center",
+              "contactPhone": "+220-422-8802",
+              "contactEmail": "inspection@vla.gm",
+              "officeAddress": "VLA Inspection Center, Kanifing Industrial Area",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM, Saturday 8 AM - 12 PM"
+            }
+          ]
+        },
+        {
+          "id": "transport-commercial",
+          "name": "Commercial Transport",
+          "icon": "truck",
+          "services": [
+            {
+              "id": "taxi-permit",
+              "name": "Taxi Operating Permit",
+              "description": "Permit to operate a commercial taxi service",
+              "requirements": [
+                "Valid driver's license (3+ years)",
+                "Vehicle roadworthiness certificate",
+                "Vehicle insurance (commercial)",
+                "Police clearance certificate",
+                "Taxi association membership"
+              ],
+              "processingTime": "3-4 weeks",
+              "cost": "D5,000 per year",
+              "contactName": "Commercial Transport Unit",
+              "contactPhone": "+220-422-8803",
+              "contactEmail": "commercial@vla.gm",
+              "officeAddress": "Vehicle Licensing Authority, Kanifing Industrial Area",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM"
+            },
+            {
+              "id": "transport-operator-license",
+              "name": "Public Transport Operator License",
+              "description": "License for bus or minibus transport services",
+              "requirements": [
+                "Business registration",
+                "Fleet list with roadworthiness certificates",
+                "Drivers' licenses for all drivers",
+                "Route approval",
+                "Insurance for all vehicles"
+              ],
+              "processingTime": "6-8 weeks",
+              "cost": "D20,000 per year",
+              "contactName": "Transport Operations",
+              "contactPhone": "+220-422-8804",
+              "contactEmail": "operations@vla.gm",
+              "officeAddress": "Vehicle Licensing Authority, Kanifing Industrial Area",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trade",
+      "name": "Ministry of Trade, Industry & Employment",
+      "description": "Business registration and trade services",
+      "phone": "+220-422-8230",
+      "email": "info@motie.gm",
+      "website": "https://www.motie.gov.gm",
+      "departments": [
+        {
+          "id": "trade-business",
+          "name": "Business Registration",
+          "icon": "briefcase",
+          "services": [
+            {
+              "id": "business-name-registration",
+              "name": "Business Name Registration",
+              "description": "Register a business name for sole proprietorship or partnership",
+              "requirements": [
+                "Completed application form",
+                "Proposed business name (3 options)",
+                "ID card or passport",
+                "Business plan (optional)"
+              ],
+              "processingTime": "2-3 weeks",
+              "cost": "D500",
+              "contactName": "Registrar of Companies",
+              "contactPhone": "+220-422-7820",
+              "contactEmail": "registration@roc.gm",
+              "officeAddress": "Attorney General's Chambers, Marina Parade, Banjul",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM"
+            },
+            {
+              "id": "company-registration",
+              "name": "Company Registration (Limited)",
+              "description": "Register a limited liability company",
+              "requirements": [
+                "Memorandum and Articles of Association",
+                "Directors' and shareholders' details",
+                "Registered office address",
+                "ID cards of directors and shareholders"
+              ],
+              "processingTime": "3-4 weeks",
+              "cost": "D5,000",
+              "contactName": "Registrar of Companies",
+              "contactPhone": "+220-422-7820",
+              "contactEmail": "registration@roc.gm",
+              "officeAddress": "Attorney General's Chambers, Marina Parade, Banjul",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM"
+            }
+          ]
+        },
+        {
+          "id": "trade-licenses",
+          "name": "Trade Licenses",
+          "icon": "store",
+          "services": [
+            {
+              "id": "import-license",
+              "name": "Import License",
+              "description": "License to import goods into The Gambia",
+              "requirements": [
+                "Business registration certificate",
+                "Tax Identification Number (TIN)",
+                "Business address verification",
+                "Description of goods to import"
+              ],
+              "processingTime": "2-3 weeks",
+              "cost": "D2,000 per year",
+              "contactName": "Trade Department",
+              "contactPhone": "+220-422-8231",
+              "contactEmail": "trade@motie.gm",
+              "officeAddress": "Ministry of Trade, Kairaba Avenue, Banjul",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM"
+            },
+            {
+              "id": "export-license",
+              "name": "Export License",
+              "description": "License to export goods from The Gambia",
+              "requirements": [
+                "Business registration certificate",
+                "Tax Identification Number (TIN)",
+                "Description of goods to export",
+                "Export destination details"
+              ],
+              "processingTime": "2-3 weeks",
+              "cost": "D2,000 per year",
+              "contactName": "Trade Department",
+              "contactPhone": "+220-422-8231",
+              "contactEmail": "trade@motie.gm",
+              "officeAddress": "Ministry of Trade, Kairaba Avenue, Banjul",
+              "officeHours": "Monday-Friday, 8 AM - 4 PM"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

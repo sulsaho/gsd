@@ -1,0 +1,103 @@
+---
+import Navigation from '../components/Navigation.astro';
+import '../styles/globals.css';
+import servicesData from '../data/services.json';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Find all government services in one place' } = Astro.props;
+const { government } = servicesData;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <meta name="keywords" content="gambia, government, services, passport, license, registration" />
+    <meta name="author" content={government.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <title>{title}</title>
+    <script is:inline>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 transition-colors">
+    <Navigation />
+
+    <main class="min-h-screen">
+      <slot />
+    </main>
+
+    <footer class="bg-gray-800 dark:bg-gray-950 text-white mt-16 no-print">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold mb-4">{government.name}</h3>
+            <p class="text-gray-300 text-sm mb-2">
+              Official government services directory
+            </p>
+            <p class="text-gray-400 text-xs">
+              Last updated: {servicesData.lastUpdated}
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+            <div class="text-gray-300 text-sm space-y-2">
+              <p>
+                <a href={`tel:${government.contact}`} class="hover:text-white transition-colors">
+                  {government.contact}
+                </a>
+              </p>
+              <p>
+                <a href={`https://${government.website}`} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+                  {government.website}
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="text-gray-300 text-sm space-y-2">
+              <li>
+                <a href="/" class="hover:text-white transition-colors">
+                  All Services
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href={`tel:${government.contact}`} class="hover:text-white transition-colors">
+                  Help & Support
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+          <p>&copy; {new Date().getFullYear()} {government.name}. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

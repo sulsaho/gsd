@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DepartmentSection from '../components/DepartmentSection.astro';
+import SearchBar from '../components/SearchBar';
+import servicesData from '../data/services.json';
+
+const { government, ministries } = servicesData;
+---
+
+<BaseLayout title={`${government.name} - Services Directory`}>
+  <div class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 py-8 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-6 sm:mb-8">
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-gray-900 dark:text-white">
+          Government Services Directory
+        </h1>
+        <p class="text-base sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto px-4">
+          Find all government services, requirements, costs, and contact information in one place
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <SearchBar client:load />
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Browse by Ministry</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {ministries.map((ministry) => (
+          <a
+            href={`#ministry-${ministry.id}`}
+            class="card p-6 hover:border-primary-300 dark:hover:border-primary-600 border border-transparent transition-colors dark:bg-gray-800"
+          >
+            <h3 class="font-semibold text-primary-700 dark:text-primary-400 mb-2">{ministry.name}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">{ministry.description}</p>
+            <p class="text-xs text-gray-500 dark:text-gray-500">
+              {ministry.departments.length} department{ministry.departments.length !== 1 ? 's' : ''}
+            </p>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    {ministries.map((ministry) => (
+      <div id={`ministry-${ministry.id}`} class="mb-16">
+        <div class="mb-8">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                {ministry.name}
+              </h2>
+              <p class="text-gray-600 dark:text-gray-400">{ministry.description}</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-primary-600 dark:text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              <a href={`tel:${ministry.phone}`} class="hover:text-primary-700 dark:hover:text-primary-400">
+                {ministry.phone}
+              </a>
+            </div>
+
+            <div class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-primary-600 dark:text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              <a href={`mailto:${ministry.email}`} class="hover:text-primary-700 dark:hover:text-primary-400">
+                {ministry.email}
+              </a>
+            </div>
+
+            {ministry.website && (
+              <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v.878A2.99 2.99 0 0110 16a2.99 2.99 0 01-3-2.122V13a2 2 0 00-2-2h-1.043c-.055-.325-.083-.66-.083-1a5.977 5.977 0 01.458-2.273z" clip-rule="evenodd"/>
+                </svg>
+                <a href={ministry.website} target="_blank" rel="noopener noreferrer" class="hover:text-primary-700">
+                  Visit Website
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          {ministry.departments.map((department) => (
+            <DepartmentSection
+              department={department}
+              ministryId={ministry.id}
+              ministryName={ministry.name}
+            />
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</BaseLayout>
